@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APOASTRO — Software Soberano, Inteligência Computacional & Ontologia Axiomática</title>
-    <meta name="description" content="Transformamos caos operacional em sistemas sob medida. Arquitetura proprietária de comando, síntese computacional e ontologia axiomática.">
+    <title>APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática</title>
+    <meta name="description" content="Transformamos caos operacional em sistemas sob medida. Arquitetura proprietária de comando, Intelegenci artificial e ontologia axiomática.">
     <meta name="theme-color" content="#000000">
 
     <!-- Open Graph / LinkedIn / WhatsApp Preview -->
@@ -12,17 +12,17 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:site_name" content="APOASTRO">
-    <meta property="og:title" content="APOASTRO — Software Soberano, Inteligência Computacional & Ontologia Axiomática">
+    <meta property="og:title" content="APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática">
     <meta property="og:description" content="Where you see chaos — we see power. Transformamos caos operacional em sistemas sob medida e infraestrutura de comando.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="APOASTRO — Software Soberano, Inteligência Computacional & Ontologia Axiomática">
+    <meta name="twitter:title" content="APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática">
     <meta name="twitter:description" content="Where you see chaos — we see power. Transformamos caos operacional em sistemas sob medida.">
 
-    <!-- Official Apoastro SVG Emblem Favicon (Transparent Background — No Black Box) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cpath fill='%23ffffff' d='M214 720L424 242h13l198 478h-80l-145-364L252 720z'/%3E%3Cpath fill='%23ffffff' d='M503 240h77l200 480h-77z'/%3E%3Ccircle fill='%23ffffff' cx='404' cy='634' r='84'/%3E%3C/svg%3E">
-    <link rel="alternate icon" type="image/svg+xml" href="apoastrolabs.svg">
+    <!-- Official Apoastro Emblem Favicon (100% Transparent Background — Vector + Dynamic Canvas PNG) -->
+    <link id="favicon-svg" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='180 200 640 560' fill='none'%3E%3Cpath fill='%23ffffff' d='M214 720L424 242h13l198 478h-80l-145-364L252 720z'/%3E%3Cpath fill='%23ffffff' d='M503 240h77l200 480h-77z'/%3E%3Ccircle fill='%23ffffff' cx='404' cy='634' r='84'/%3E%3C/svg%3E">
+    <link id="favicon-png" rel="shortcut icon" type="image/png" href="">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,10 +30,11 @@
     <!-- Three.js r128 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <!-- Fonts: Lastica (Local/Brand) + Lexend Exa, Space Grotesk & Martian Mono -->
+    <!-- Fonts: Lastica (Brand) + Military Jr34 (Tactical Military) + Lexend Exa, Space Grotesk & Chakra Petch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lexend+Exa:wght@300;400;500;600;700&family=Martian+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Lexend+Exa:wght@300;400;500;600;700&family=Martian+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/military" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -42,7 +43,8 @@
                     fontFamily: {
                         brand: ['"Lastica"', '"Lexend Exa"', '"Space Grotesk"', 'sans-serif'],
                         display: ['"Space Grotesk"', 'sans-serif'],
-                        mono: ['"Martian Mono"', 'monospace'],
+                        mono: ['"Military Jr34"', '"Military"', '"Chakra Petch"', '"Martian Mono"', 'monospace'],
+                        military: ['"Military Jr34"', '"Military"', '"Chakra Petch"', '"Martian Mono"', 'monospace'],
                         sans: ['"Inter"', 'sans-serif'],
                     }
                 }
@@ -58,12 +60,33 @@
             font-display: swap;
         }
 
+        @font-face {
+            font-family: 'Military Jr34';
+            src: local('Military Jr34'),
+                 local('MilitaryJr34'),
+                 local('Military-Jr34'),
+                 local('Military JR 34'),
+                 local('Military'),
+                 url('MilitaryJr34.woff2') format('woff2'),
+                 url('MilitaryJr34.ttf') format('truetype');
+            font-weight: 400 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
         :root {
             --font-brand: 'Lastica', 'Lexend Exa', 'Space Grotesk', sans-serif;
+            --font-military: 'Military Jr34', 'Military', 'Chakra Petch', 'Martian Mono', monospace;
             --hairline: rgba(255, 255, 255, 0.08);
             --hairline-active: rgba(255, 255, 255, 0.32);
             --crimson-text-grad: linear-gradient(90deg, rgba(195, 20, 35, 0.88) 0%, rgba(115, 10, 20, 0.55) 100%);
             --crimson-btn-grad: linear-gradient(135deg, rgba(195, 20, 35, 0.92) 0%, rgba(85, 8, 16, 0.96) 60%, rgba(20, 4, 6, 0.98) 100%);
+        }
+
+        /* Tactical Military Typography Utility ("Military Jr34") */
+        .font-mono,
+        .font-military {
+            font-family: var(--font-military);
         }
 
         /* Native Browser Text Selection (Tactical Highlighter) */
@@ -102,22 +125,48 @@
             color: #ffffff;
             overflow-x: hidden;
             width: 100%;
+            max-width: 100vw;
             position: relative;
             font-family: 'Space Grotesk', sans-serif;
             -webkit-text-size-adjust: 100%;
         }
 
-        /* Mobile Optimization: Prevent Safari/Chrome auto-zoom on form inputs */
+        html {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        /* Mobile Optimization: Fluid responsive layout & prevent Safari/Chrome auto-zoom on form inputs */
         @media (max-width: 768px) {
             input, textarea, select {
                 font-size: 16px !important;
             }
             .font-brand-title {
-                letter-spacing: 0.18em !important;
+                letter-spacing: 0.12em !important;
             }
-            h1, h2, h3 {
+            h1, h2, h3, .pillar-title {
                 word-break: break-word;
+                overflow-wrap: anywhere;
                 hyphens: auto;
+            }
+            .marca-texto {
+                padding: 2px 5px;
+                box-decoration-break: clone;
+                -webkit-box-decoration-break: clone;
+            }
+            .reading-block {
+                transform: none !important;
+                opacity: 0.55;
+            }
+            .reading-block.is-reading {
+                opacity: 1;
+                transform: none !important;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .font-brand-title {
+                letter-spacing: 0.08em !important;
             }
         }
 
@@ -377,9 +426,59 @@
 
         /* Sharp Tactical Bracket Indicator (No glowing round dots) */
         .tactical-bracket {
-            font-family: 'Martian Mono', monospace;
+            font-family: var(--font-military);
             letter-spacing: 0.1em;
             color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* =============================================================== */
+        /* TACTICAL INSTRUMENTATION BUTTONS (NON-GENERIC MILITARY SPEC)    */
+        /* =============================================================== */
+        .btn-tactical-mono {
+            position: relative;
+            font-family: var(--font-military);
+            background: rgba(255, 255, 255, 0.03);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 0;
+            transition: background-color 90ms steps(2, end), color 90ms steps(2, end), border-color 90ms ease;
+        }
+        .btn-tactical-mono::before,
+        .btn-tactical-mono::after {
+            content: '+';
+            position: absolute;
+            font-family: var(--font-military);
+            font-size: 9px;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.45);
+            pointer-events: none;
+            transition: color 90ms ease;
+        }
+        .btn-tactical-mono::before { top: 3px; left: 4px; }
+        .btn-tactical-mono::after  { bottom: 3px; right: 4px; }
+        .btn-tactical-mono:hover {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+        .btn-tactical-mono:hover::before,
+        .btn-tactical-mono:hover::after {
+            color: #000000;
+        }
+
+        .btn-tactical-solid {
+            position: relative;
+            background: #ffffff;
+            color: #000000;
+            border: 1px solid #ffffff;
+            border-radius: 0;
+            clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+            transition: background-color 90ms steps(2, end), color 90ms steps(2, end), border-color 90ms ease;
+        }
+        .btn-tactical-solid:hover {
+            background: #000000;
+            color: #ffffff;
+            border-color: #ffffff;
         }
 
         /* =============================================================== */
@@ -388,11 +487,13 @@
         .btn-unique-crimson {
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(235, 35, 50, 0.65);
+            border: 1px solid rgba(235, 35, 50, 0.72);
+            border-radius: 0;
+            clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
             background: var(--crimson-btn-grad);
             color: #ffffff;
             box-shadow: 0 10px 35px -10px rgba(195, 20, 35, 0.45);
-            transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .btn-unique-crimson::before {
             content: '';
@@ -410,7 +511,7 @@
             inset: 0;
             background: linear-gradient(90deg, rgba(255, 42, 58, 0.35) 0%, transparent 100%);
             opacity: 0;
-            transition: opacity 0.45s ease;
+            transition: opacity 0.25s ease;
             z-index: 0;
         }
         .btn-unique-crimson:hover {
@@ -489,17 +590,17 @@
     <!-- ================================================================= -->
     <!-- 3. MINIMALIST MILITARY-PREMIUM TOP HEADER (ZERO ROUND DOTS)       -->
     <!-- ================================================================= -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-black/85 backdrop-blur-md hairline-b">
-        <div class="max-w-[1440px] mx-auto px-3 sm:px-6 md:px-12 h-20 flex items-center justify-between gap-2 sm:gap-3">
+    <header class="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-md hairline-b">
+        <div class="max-w-[1440px] mx-auto px-3 sm:px-6 md:px-12 h-16 sm:h-20 flex items-center justify-between gap-1.5 sm:gap-3">
             
             <!-- Left: Official Apoastro Emblem + Brand Font ("Lastica") Wordmark -->
-            <a href="#act-1" aria-label="APOASTRO Início" class="flex items-center gap-2 sm:gap-4 group min-h-[44px]" onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()">
+            <a href="#act-1" aria-label="APOASTRO Início" class="flex items-center gap-2 sm:gap-4 group min-h-[44px] shrink-0" onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()">
                 <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-white transition-transform duration-500 group-hover:scale-105 shrink-0" viewBox="200 220 600 520">
                     <path d="M 214 720 L 424 242 L 437 242 L 635 720 L 555 720 L 410 356 L 252 720 Z" />
                     <path d="M 503 240 L 580 240 L 780 720 L 703 720 Z" />
                     <circle cx="404" cy="634" r="84" />
                 </svg>
-                <span class="font-brand-title font-semibold text-[11px] sm:text-xs md:text-sm text-white tracking-[0.16em] sm:tracking-[0.34em]">APOASTRO</span>
+                <span class="font-brand-title font-semibold text-[10px] xs:text-[11px] sm:text-xs md:text-sm text-white">APOASTRO</span>
             </a>
 
             <!-- Center: Minimal Act & Optical Scanner Telemetry (Bracketed, No Round Dots) -->
@@ -510,18 +611,18 @@
             </div>
 
             <!-- Right: Legible Telemetry Toggles & Visible Header CTA Button -->
-            <div class="flex items-center gap-1.5 sm:gap-4 font-mono text-xs tracking-[0.12em] sm:tracking-[0.16em] uppercase">
-                <button id="btn-sound" type="button" aria-label="Alternar Som" class="min-h-[44px] px-2 sm:px-2.5 text-white/80 hover:text-white transition-colors flex items-center gap-1 hairline bg-white/[0.02]" title="Alternar Som de Estúdio">
-                    <span id="sound-text" class="text-[10px] sm:text-xs">SOUND: [ ON ]</span>
+            <div class="flex items-center gap-1 sm:gap-3 md:gap-4 font-mono text-xs tracking-[0.08em] sm:tracking-[0.16em] uppercase shrink-0">
+                <button id="btn-sound" type="button" aria-label="Alternar Som" class="min-h-[40px] sm:min-h-[44px] px-2 sm:px-2.5 text-white/80 hover:text-white transition-colors flex items-center gap-1 hairline bg-white/[0.02]" title="Alternar Som de Estúdio">
+                    <span id="sound-text" class="text-[9px] sm:text-xs whitespace-nowrap">SOUND: [ ON ]</span>
                 </button>
 
-                <button id="btn-lang" type="button" aria-label="Alternar Idioma Português ou Inglês" class="min-h-[44px] px-1.5 sm:px-2 text-white/80 hover:text-white transition-colors text-[10px] sm:text-xs">
+                <button id="btn-lang" type="button" aria-label="Alternar Idioma Português ou Inglês" class="min-h-[40px] sm:min-h-[44px] px-1.5 sm:px-2 text-white/80 hover:text-white transition-colors text-[9px] sm:text-xs whitespace-nowrap">
                     <span id="lang-label">PT / EN</span>
                 </button>
 
                 <a href="#act-3" 
                    onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
-                   class="min-h-[44px] px-2.5 sm:px-5 py-2 hairline bg-white/[0.06] hover:bg-white hover:text-black text-white transition-all duration-300 flex items-center justify-center whitespace-nowrap text-[10px] sm:text-xs">
+                   class="btn-tactical-mono min-h-[40px] sm:min-h-[44px] px-2.5 sm:px-5 py-2 flex items-center justify-center whitespace-nowrap text-[9px] sm:text-xs">
                     <span data-i18n="nav_briefing">SOLICITAR BRIEFING</span>
                 </a>
             </div>
@@ -537,43 +638,43 @@
         <!-- ACT I: THE BEGINNING — ARCHITECTING POWER FROM CHAOS          -->
         <!-- STRICT RED RULE: Only 1 crimson element in Act I (#hl-act1)   -->
         <!-- ============================================================= -->
-        <section id="act-1" class="min-h-screen flex flex-col justify-between pt-28 pb-10 px-5 sm:px-6 md:px-12 max-w-[1440px] mx-auto is-selected-view">
+        <section id="act-1" class="min-h-[100svh] flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-10 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto is-selected-view">
             
             <!-- Top Minimal Coordinates with Typewriter Effect (Zero Round Dots) -->
-            <div class="flex flex-wrap justify-between items-center gap-2 font-mono text-xs tracking-[0.22em] text-white/75 uppercase">
+            <div class="flex flex-wrap justify-between items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.22em] text-white/75 uppercase">
                 <span class="flex items-center gap-2">
                     <span class="text-white/50">[ 01 ]</span>
-                    <span><span class="font-brand-title text-xs text-white/95">APOASTRO</span> VANGUARD</span>
+                    <span><span class="font-brand-title text-[10px] sm:text-xs text-white/95">APOASTRO</span> VANGUARD</span>
                 </span>
                 <span class="hidden sm:inline text-white/75" data-typewriter="hero_tw_status">SCAN ÓPTICO // RASTREANDO ANOMALIAS</span>
             </div>
 
             <!-- Monumental Centerpiece: Motto + Sovereign Headline + Visible CTAs -->
-            <div id="hero-reading-container" class="my-auto py-10 md:py-14 max-w-5xl">
-                <div class="inline-flex items-center gap-3 px-4 py-2 mb-7 hairline border-l-2 border-l-white bg-white/[0.03]">
-                    <span class="font-mono text-xs tracking-[0.22em] sm:tracking-[0.28em] text-white/95 uppercase" data-typewriter="hero_tw_motto">
+            <div id="hero-reading-container" class="my-auto py-6 sm:py-10 md:py-14 max-w-5xl">
+                <div class="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 mb-5 sm:mb-7 hairline border-l-2 border-l-white bg-white/[0.03] max-w-full">
+                    <span class="font-mono text-[10px] sm:text-xs tracking-[0.12em] sm:tracking-[0.28em] text-white/95 uppercase break-words" data-typewriter="hero_tw_motto">
                         // WHERE YOU SEE CHAOS — WE SEE POWER.
                     </span>
                 </div>
 
                 <!-- Exact Requested Hero Headline & Single Act I Crimson Highlight (#hl-act1) -->
-                <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[4.15rem] font-light tracking-[-0.02em] leading-[1.1] uppercase">
+                <h1 class="font-display text-[1.65rem] sm:text-5xl md:text-6xl lg:text-[4.15rem] font-light tracking-[-0.02em] leading-[1.15] sm:leading-[1.1] uppercase">
                     <span data-i18n="hero_line_1">Transformamos caos operacional em sistemas sob medida,</span><br>
-                    <span class="font-brand-title text-xl sm:text-3xl md:text-4xl lg:text-[2.65rem] font-semibold tracking-[0.12em] sm:tracking-[0.16em] inline-block mt-4 leading-[1.25]">
+                    <span class="font-brand-title text-base sm:text-3xl md:text-4xl lg:text-[2.65rem] font-semibold tracking-[0.08em] sm:tracking-[0.16em] inline-block mt-3 sm:mt-4 leading-[1.35] sm:leading-[1.25]">
                         <span class="marca-texto marca-texto--crimson" id="hl-act1" data-i18n="hero_line_2">APOASTRO ARQUITETA PODER.</span>
                     </span>
                 </h1>
 
                 <!-- Broad Institutional Subheadline (Zero Saturated Buzzwords) -->
-                <p class="font-sans text-base sm:text-lg md:text-xl text-white/80 font-light max-w-3xl leading-relaxed mt-8" data-i18n="hero_sub">
+                <p class="font-sans text-sm sm:text-lg md:text-xl text-white/80 font-light max-w-3xl leading-relaxed mt-5 sm:mt-8" data-i18n="hero_sub">
                     Unificamos fluxos complexos e informações dispersas da sua organização em uma arquitetura proprietária de comando, síntese computacional e decisão de alta precisão.
                 </p>
 
                 <!-- Visible Hero Action Bar: Monochrome CTAs to Respect Single Crimson Rule -->
-                <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
+                <div class="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
                     <a href="#act-3" 
                        onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
-                       class="min-h-[52px] px-7 py-4 bg-white text-black hover:bg-white/90 font-mono text-xs font-medium tracking-[0.22em] uppercase flex items-center justify-center gap-3 transition-all duration-300">
+                       class="btn-tactical-solid min-h-[48px] sm:min-h-[52px] px-5 sm:px-7 py-3.5 sm:py-4 font-mono text-[11px] sm:text-xs font-medium tracking-[0.14em] sm:tracking-[0.22em] uppercase flex items-center justify-center gap-2 sm:gap-3 text-center">
                         <span data-i18n="hero_cta_primary">SOLICITAR BRIEFING EXECUTIVO</span>
                         <span>→</span>
                     </a>
@@ -582,14 +683,14 @@
                     <a href="https://wa.me/5515981124811?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20APOASTRO%20e%20gostaria%20de%20agendar%20um%20briefing%20executivo."
                        target="_blank" rel="noopener noreferrer"
                        onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
-                       class="pt-only-flex min-h-[52px] px-6 py-4 hairline bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/50 text-white font-mono text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-3 transition-all duration-300">
+                       class="pt-only-flex btn-tactical-mono min-h-[48px] sm:min-h-[52px] px-5 sm:px-6 py-3.5 sm:py-4 font-mono text-[11px] sm:text-xs tracking-[0.14em] sm:tracking-[0.2em] uppercase flex items-center justify-center gap-2 sm:gap-3 text-center">
                         <span>[ WHATSAPP EXECUTIVO ]</span>
                         <span>↗</span>
                     </a>
 
                     <a href="#act-2" 
                        onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
-                       class="min-h-[48px] px-4 py-3 font-mono text-xs tracking-[0.2em] text-white/75 hover:text-white uppercase flex items-center justify-center sm:justify-start gap-2 transition-colors">
+                       class="min-h-[44px] sm:min-h-[48px] px-4 py-2.5 sm:py-3 font-mono text-[11px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] text-white/75 hover:text-white uppercase flex items-center justify-center sm:justify-start gap-2 transition-colors">
                         <span data-i18n="hero_anchor">INSPECIONAR ARQUITETURA</span>
                         <span>↓</span>
                     </a>
@@ -597,9 +698,9 @@
             </div>
 
             <!-- Bottom Act I Minimal Scroll Cue -->
-            <div class="flex justify-between items-end hairline-t pt-5 font-mono text-xs tracking-[0.22em] text-white/65 uppercase">
+            <div class="flex justify-between items-end gap-2 hairline-t pt-4 sm:pt-5 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.22em] text-white/65 uppercase">
                 <span data-typewriter="scroll_cue">ROLE PARA ESCANEAR AS 3 DISCIPLINAS ↓</span>
-                <span>[ 01 / 03 ]</span>
+                <span class="shrink-0">[ 01 / 03 ]</span>
             </div>
         </section>
 
@@ -607,91 +708,91 @@
         <!-- ACT II: THE MIDDLE — THE 3 DISCIPLINES OF COMMAND             -->
         <!-- STRICT RED RULE: Only 1 crimson element in Act II (#hl-act2)  -->
         <!-- ============================================================= -->
-        <section id="act-2" class="py-24 md:py-40 px-5 sm:px-6 md:px-12 max-w-[1440px] mx-auto hairline-t is-selected-view">
+        <section id="act-2" class="py-16 sm:py-24 md:py-40 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto hairline-t is-selected-view">
             
             <!-- Act II Section Header (Contains the SINGLE Crimson Element of Act II: #hl-act2) -->
-            <div class="max-w-4xl mb-16 md:mb-28">
-                <div class="flex items-center gap-2 font-mono text-xs tracking-[0.25em] text-white/75 uppercase mb-5">
+            <div class="max-w-4xl mb-12 sm:mb-16 md:mb-28">
+                <div class="flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.25em] text-white/75 uppercase mb-4 sm:mb-5">
                     <span class="text-white/50">[ 02 ]</span>
                     <span data-typewriter="act2_tw_header">02 // ARQUITETURA CENTRAL APOASTRO</span>
                 </div>
-                <h2 class="font-display text-2xl sm:text-4xl md:text-5xl font-light tracking-tight uppercase leading-[1.18]">
+                <h2 class="font-display text-xl sm:text-4xl md:text-5xl font-light tracking-tight uppercase leading-[1.25] sm:leading-[1.18]">
                     <span data-i18n="act2_title_1">Três disciplinas.</span>
                     <span class="marca-texto marca-texto--crimson" id="hl-act2" data-i18n="act2_title_2">Uma única infraestrutura de comando.</span>
                 </h2>
-                <p class="font-sans text-base sm:text-lg md:text-xl text-white/75 font-light leading-relaxed mt-6 max-w-3xl" data-i18n="act2_sub">
+                <p class="font-sans text-sm sm:text-lg md:text-xl text-white/75 font-light leading-relaxed mt-4 sm:mt-6 max-w-3xl" data-i18n="act2_sub">
                     A entropia da sua operação é absorvida, estruturada e convertida em alavancagem institucional através de três camadas tecnológicas interdependentes.
                 </p>
             </div>
 
             <!-- Spacious Interactive Reading Presentation of the 3 Disciplines -->
-            <div class="space-y-20 md:space-y-32">
+            <div class="space-y-12 sm:space-y-20 md:space-y-32">
 
                 <!-- PILLAR 01: SOVEREIGN SOFTWARE -->
-                <article data-pillar="0" class="pillar-row reading-block is-reading pl-5 sm:pl-8 md:pl-10 py-8 md:py-14 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
+                <article data-pillar="0" class="pillar-row reading-block is-reading pl-4 sm:pl-8 md:pl-10 py-6 sm:py-8 md:py-14 pr-3 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 items-start">
                     <div class="lg:col-span-4 font-mono">
-                        <div class="reading-status-tag inline-flex items-center gap-2 px-3 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
+                        <div class="reading-status-tag inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 mb-3 sm:mb-4 text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
                             <span data-i18n="reading_active_tag">[ EM LEITURA ATIVA ]</span>
                         </div>
-                        <span class="text-5xl md:text-7xl font-light tracking-tighter text-white/95 block">01</span>
-                        <span class="text-xs tracking-[0.2em] text-white/80 uppercase mt-3 block" data-typewriter="p1_tw_sub">01 // ENGENHARIA DE MISSÃO CRÍTICA</span>
+                        <span class="text-4xl sm:text-5xl md:text-7xl font-light tracking-tighter text-white/95 block">01</span>
+                        <span class="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.2em] text-white/80 uppercase mt-2 sm:mt-3 block" data-typewriter="p1_tw_sub">01 // ENGENHARIA DE MISSÃO CRÍTICA</span>
                     </div>
-                    <div class="lg:col-span-8 max-w-3xl space-y-6">
-                        <h3 class="pillar-title font-brand-title text-xl sm:text-3xl md:text-4xl font-semibold tracking-[0.18em] uppercase" data-i18n="p1_title">
+                    <div class="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-6">
+                        <h3 class="pillar-title font-brand-title text-lg sm:text-3xl md:text-4xl font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase" data-i18n="p1_title">
                             Software Soberano
                         </h3>
-                        <p class="font-sans text-base sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p1_desc_html">
+                        <p class="font-sans text-sm sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p1_desc_html">
                             Ecossistemas digitais proprietários desenhados do zero para a realidade estrutural da sua operação. Substituímos ferramentas genéricas e fragmentadas por <span class="marca-texto marca-texto--mono">infraestruturas de código fechado, ultrarrápidas e inabaláveis</span>, garantindo domínio absoluto sobre o núcleo do seu negócio.
                         </p>
-                        <div class="pt-4 flex flex-wrap items-center gap-3 sm:gap-4 font-mono text-xs tracking-[0.18em] text-white/85 uppercase">
-                            <span class="border border-white/30 bg-white/[0.04] px-3.5 py-2" data-i18n="p1_metric">LATÊNCIA DE NÚCLEO: &lt; 12ms</span>
-                            <span class="border border-white/20 px-3.5 py-2 text-white/75" data-i18n="p1_spec">ARQUITETURA PROPRIETÁRIA // ISOLAMENTO TOTAL</span>
+                        <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-4 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/85 uppercase">
+                            <span class="border border-white/30 bg-white/[0.04] px-3 sm:px-3.5 py-2 text-center sm:text-left" data-i18n="p1_metric">LATÊNCIA DE NÚCLEO: &lt; 12ms</span>
+                            <span class="border border-white/20 px-3 sm:px-3.5 py-2 text-white/75 text-center sm:text-left" data-i18n="p1_spec">ARQUITETURA PROPRIETÁRIA // ISOLAMENTO TOTAL</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- PILLAR 02: COMPUTATIONAL INTELLIGENCE (ZERO BUZZWORDS) -->
-                <article data-pillar="1" class="pillar-row reading-block pl-5 sm:pl-8 md:pl-10 py-8 md:py-14 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
+                <!-- PILLAR 02: INTELEGENCI ARTIFICIAL -->
+                <article data-pillar="1" class="pillar-row reading-block pl-4 sm:pl-8 md:pl-10 py-6 sm:py-8 md:py-14 pr-3 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 items-start">
                     <div class="lg:col-span-4 font-mono">
-                        <div class="reading-status-tag inline-flex items-center gap-2 px-3 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
+                        <div class="reading-status-tag inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 mb-3 sm:mb-4 text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
                             <span data-i18n="reading_active_tag">[ EM LEITURA ATIVA ]</span>
                         </div>
-                        <span class="text-5xl md:text-7xl font-light tracking-tighter text-white/95 block">02</span>
-                        <span class="text-xs tracking-[0.2em] text-white/80 uppercase mt-3 block" data-typewriter="p2_tw_sub">02 // SÍNTESE COGNITIVA PROPRIETÁRIA</span>
+                        <span class="text-4xl sm:text-5xl md:text-7xl font-light tracking-tighter text-white/95 block">02</span>
+                        <span class="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.2em] text-white/80 uppercase mt-2 sm:mt-3 block" data-typewriter="p2_tw_sub">02 // SÍNTESE COGNITIVA PROPRIETÁRIA</span>
                     </div>
-                    <div class="lg:col-span-8 max-w-3xl space-y-6">
-                        <h3 class="pillar-title font-brand-title text-xl sm:text-3xl md:text-4xl font-semibold tracking-[0.18em] uppercase" data-i18n="p2_title">
-                            Inteligência Computacional
+                    <div class="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-6">
+                        <h3 class="pillar-title font-brand-title text-lg sm:text-3xl md:text-4xl font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase" data-i18n="p2_title">
+                            Intelegenci artificial
                         </h3>
-                        <p class="font-sans text-base sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p2_desc_html">
+                        <p class="font-sans text-sm sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p2_desc_html">
                             Núcleos matemáticos e modelos fundacionais acoplados diretamente à realidade da sua instituição. Processamos volumes massivos de informação não estruturada para <span class="marca-texto marca-texto--mono">executar raciocínio complexo, automação de alto nível e síntese estratégica</span> sem depender de soluções superficiais de prateleira.
                         </p>
-                        <div class="pt-4 flex flex-wrap items-center gap-3 sm:gap-4 font-mono text-xs tracking-[0.18em] text-white/85 uppercase">
-                            <span class="border border-white/30 bg-white/[0.04] px-3.5 py-2" data-i18n="p2_metric">PRECISÃO OPERACIONAL: 99.94%</span>
-                            <span class="border border-white/20 px-3.5 py-2 text-white/75" data-i18n="p2_spec">MODELOS DEDICADOS // EXECUÇÃO AUTÔNOMA</span>
+                        <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-4 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/85 uppercase">
+                            <span class="border border-white/30 bg-white/[0.04] px-3 sm:px-3.5 py-2 text-center sm:text-left" data-i18n="p2_metric">PRECISÃO OPERACIONAL: 99.94%</span>
+                            <span class="border border-white/20 px-3 sm:px-3.5 py-2 text-white/75 text-center sm:text-left" data-i18n="p2_spec">MODELOS DEDICADOS // EXECUÇÃO AUTÔNOMA</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- PILLAR 03: AXIOMATIC ONTOLOGY -->
-                <article data-pillar="2" class="pillar-row reading-block pl-5 sm:pl-8 md:pl-10 py-8 md:py-14 pr-4 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
+                <article data-pillar="2" class="pillar-row reading-block pl-4 sm:pl-8 md:pl-10 py-6 sm:py-8 md:py-14 pr-3 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 items-start">
                     <div class="lg:col-span-4 font-mono">
-                        <div class="reading-status-tag inline-flex items-center gap-2 px-3 py-1.5 mb-4 text-xs tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
+                        <div class="reading-status-tag inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 mb-3 sm:mb-4 text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
                             <span data-i18n="reading_active_tag">[ EM LEITURA ATIVA ]</span>
                         </div>
-                        <span class="text-5xl md:text-7xl font-light tracking-tighter text-white/95 block">03</span>
-                        <span class="text-xs tracking-[0.2em] text-white/80 uppercase mt-3 block" data-typewriter="p3_tw_sub">03 // MODELAGEM FORMAL DE REALIDADE</span>
+                        <span class="text-4xl sm:text-5xl md:text-7xl font-light tracking-tighter text-white/95 block">03</span>
+                        <span class="text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.2em] text-white/80 uppercase mt-2 sm:mt-3 block" data-typewriter="p3_tw_sub">03 // MODELAGEM FORMAL DE REALIDADE</span>
                     </div>
-                    <div class="lg:col-span-8 max-w-3xl space-y-6">
-                        <h3 class="pillar-title font-brand-title text-xl sm:text-3xl md:text-4xl font-semibold tracking-[0.18em] uppercase" data-i18n="p3_title">
+                    <div class="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-6">
+                        <h3 class="pillar-title font-brand-title text-lg sm:text-3xl md:text-4xl font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase" data-i18n="p3_title">
                             Ontologia Axiomática
                         </h3>
-                        <p class="font-sans text-base sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p3_desc_html">
+                        <p class="font-sans text-sm sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p3_desc_html">
                             Mapeamos todas as variáveis, forças e dependências da sua organização em uma camada semântica viva e matematicamente verificável. Antes de qualquer movimento estratégico, <span class="marca-texto marca-texto--mono">simulamos desdobramentos sistêmicos e eliminamos pontos cegos</span> para que a liderança governe com certeza formal.
                         </p>
-                        <div class="pt-4 flex flex-wrap items-center gap-3 sm:gap-4 font-mono text-xs tracking-[0.18em] text-white/85 uppercase">
-                            <span class="border border-white/30 bg-white/[0.04] px-3.5 py-2" data-i18n="p3_metric">COBERTURA SEMÂNTICA: 100%</span>
-                            <span class="border border-white/20 px-3.5 py-2 text-white/75" data-i18n="p3_spec">GRAFO ONTOLÓGICO // SIMULAÇÃO SISTÊMICA</span>
+                        <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-4 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/85 uppercase">
+                            <span class="border border-white/30 bg-white/[0.04] px-3 sm:px-3.5 py-2 text-center sm:text-left" data-i18n="p3_metric">COBERTURA SEMÂNTICA: 100%</span>
+                            <span class="border border-white/20 px-3 sm:px-3.5 py-2 text-white/75 text-center sm:text-left" data-i18n="p3_spec">GRAFO ONTOLÓGICO // SIMULAÇÃO SISTÊMICA</span>
                         </div>
                     </div>
                 </article>
@@ -703,20 +804,20 @@
         <!-- ACT III: THE END — HIGH-CONVERSION EXECUTIVE TERMINAL         -->
         <!-- STRICT RED RULE: Only 1 crimson element in Act III (#submit-btn) -->
         <!-- ============================================================= -->
-        <section id="act-3" class="min-h-screen flex flex-col justify-between py-24 md:py-28 px-5 sm:px-6 md:px-12 max-w-[1440px] mx-auto hairline-t is-selected-view">
+        <section id="act-3" class="min-h-[100svh] flex flex-col justify-between py-16 sm:py-24 md:py-28 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto hairline-t is-selected-view">
             
-            <div class="flex flex-wrap justify-between items-center gap-2 font-mono text-xs tracking-[0.22em] text-white/75 uppercase">
+            <div class="flex flex-wrap justify-between items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.22em] text-white/75 uppercase">
                 <span class="flex items-center gap-2">
                     <span class="text-white/50">[ 03 ]</span>
                     <span data-typewriter="act3_tw_header">03 // TERMINAL DE COMANDO EXECUTIVO</span>
                 </span>
-                <span>[ CONVERGÊNCIA SOBERANA // 100% ]</span>
+                <span class="hidden xs:inline">[ CONVERGÊNCIA SOBERANA // 100% ]</span>
             </div>
 
-            <div class="my-auto py-12 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div class="my-auto py-8 sm:py-12 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-start">
                 
                 <!-- Left Column: Direct Conversion Statement + WhatsApp Fast-Track in PT -->
-                <div class="lg:col-span-5 space-y-7">
+                <div class="lg:col-span-5 space-y-5 sm:space-y-7">
                     <div class="inline-flex items-center gap-3.5 px-3.5 py-2 hairline bg-white/[0.04] border-l-2 border-l-white">
                         <svg class="w-4 h-4 fill-white" viewBox="200 220 600 520">
                             <path d="M 214 720 L 424 242 L 437 242 L 635 720 L 555 720 L 410 356 L 252 720 Z" />
@@ -726,28 +827,28 @@
                         <span class="font-brand-title text-xs text-white">APOASTRO</span>
                     </div>
 
-                    <h2 class="font-display text-3xl sm:text-5xl font-light tracking-tight uppercase leading-[1.08]" data-i18n="act3_heading">
+                    <h2 class="font-display text-2xl sm:text-5xl font-light tracking-tight uppercase leading-[1.12] sm:leading-[1.08]" data-i18n="act3_heading">
                         Inicie uma operação confidencial.
                     </h2>
 
-                    <p class="font-sans text-base md:text-lg text-white/80 font-light leading-relaxed" data-i18n="act3_sub_html">
-                        Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Inteligência Computacional ou Ontologia Axiomática na sua organização.
+                    <p class="font-sans text-sm sm:text-base md:text-lg text-white/80 font-light leading-relaxed" data-i18n="act3_sub_html">
+                        Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Intelegenci artificial ou Ontologia Axiomática na sua organização.
                     </p>
 
                     <!-- Direct WhatsApp Conversion Card (Visible Only in PT Mode) -->
-                    <div class="pt-only-block pt-4">
-                        <div class="p-6 hairline bg-white/[0.03] border-l-2 border-l-white space-y-4">
-                            <div class="font-mono text-xs tracking-[0.2em] text-white/85 uppercase">
+                    <div class="pt-only-block pt-2 sm:pt-4">
+                        <div class="p-4 sm:p-6 hairline bg-white/[0.03] border-l-2 border-l-white space-y-3 sm:space-y-4">
+                            <div class="font-mono text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] text-white/85 uppercase">
                                 <span>[ CANAL DIRETO // BRASIL ]</span>
                             </div>
-                            <p class="font-sans text-sm text-white/75 font-light leading-relaxed">
+                            <p class="font-sans text-xs sm:text-sm text-white/75 font-light leading-relaxed">
                                 Prefere iniciar o alinhamento sem formulário? Conecte-se diretamente com a engenharia executiva da APOASTRO via WhatsApp.
                             </p>
                             <a id="whatsapp-direct-link"
                                href="https://wa.me/5515981124811?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20APOASTRO%20e%20gostaria%20de%20agendar%20um%20briefing%20executivo."
                                target="_blank" rel="noopener noreferrer"
                                onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
-                               class="min-h-[48px] w-full px-5 py-3.5 hairline bg-white/10 hover:bg-white hover:text-black text-white font-mono text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-3 transition-all duration-300">
+                               class="btn-tactical-mono min-h-[48px] w-full px-4 sm:px-5 py-3.5 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.2em] uppercase flex items-center justify-center gap-2 sm:gap-3 text-center">
                                 <span>INICIAR CONVERSA NO WHATSAPP</span>
                                 <span>↗</span>
                             </a>
@@ -756,8 +857,8 @@
                 </div>
 
                 <!-- Right Column: Working Lead Capture Form (Bilingual LGPD / GDPR-CCPA) -->
-                <div class="lg:col-span-7">
-                    <form id="executive-form" onsubmit="window.submitExecutiveForm(event)" class="space-y-8 bg-black/85 backdrop-blur-md p-6 sm:p-8 md:p-12 hairline relative overflow-hidden">
+                <div class="lg:col-span-7 w-full">
+                    <form id="executive-form" onsubmit="window.submitExecutiveForm(event)" class="space-y-6 sm:space-y-8 bg-black/85 backdrop-blur-md p-5 sm:p-8 md:p-12 hairline relative overflow-hidden">
                         <!-- Top Monochrome Hairline Accent -->
                         <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-white/60 via-white/20 to-transparent"></div>
 
@@ -765,36 +866,36 @@
                         <input type="text" name="_honey" id="exec-honey" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
                         <div class="space-y-2">
-                            <label for="exec-name" class="block font-mono text-xs tracking-[0.22em] text-white/85 uppercase" data-i18n="label_name">
+                            <label for="exec-name" class="block font-mono text-[11px] sm:text-xs tracking-[0.16em] sm:tracking-[0.22em] text-white/85 uppercase" data-i18n="label_name">
                                 01 // NOME E CARGO
                             </label>
                             <input id="exec-name" name="nome_cargo" type="text" required
                                 onfocus="window.soundEngine && window.soundEngine.playHoverPulse()"
-                                class="input-minimal w-full py-3.5 font-sans text-base text-white placeholder-white/40"
+                                class="input-minimal w-full py-3 sm:py-3.5 font-sans text-base text-white placeholder-white/40"
                                 data-placeholder-i18n="placeholder_name"
                                 placeholder="CEO - Coordenador Geral">
                         </div>
 
                         <div class="space-y-2">
-                            <label for="exec-email" class="block font-mono text-xs tracking-[0.22em] text-white/85 uppercase" data-i18n="label_email">
+                            <label for="exec-email" class="block font-mono text-[11px] sm:text-xs tracking-[0.16em] sm:tracking-[0.22em] text-white/85 uppercase" data-i18n="label_email">
                                 02 // E-MAIL CORPORATIVO
                             </label>
                             <input id="exec-email" name="email" type="email" required
                                 onfocus="window.soundEngine && window.soundEngine.playHoverPulse()"
-                                class="input-minimal w-full py-3.5 font-sans text-base text-white placeholder-white/40"
+                                class="input-minimal w-full py-3 sm:py-3.5 font-sans text-base text-white placeholder-white/40"
                                 data-placeholder-i18n="placeholder_email"
                                 placeholder="diretoria@organizacao.com">
                         </div>
 
                         <div class="space-y-2">
-                            <label for="exec-scope" class="block font-mono text-xs tracking-[0.22em] text-white/85 uppercase" data-i18n="label_scope">
+                            <label for="exec-scope" class="block font-mono text-[11px] sm:text-xs tracking-[0.16em] sm:tracking-[0.22em] text-white/85 uppercase" data-i18n="label_scope">
                                 03 // ORGANIZAÇÃO E ESCOPO PRIORITÁRIO
                             </label>
                             <input id="exec-scope" name="organizacao_escopo" type="text" required
                                 onfocus="window.soundEngine && window.soundEngine.playHoverPulse()"
-                                class="input-minimal w-full py-3.5 font-sans text-base text-white placeholder-white/40"
+                                class="input-minimal w-full py-3 sm:py-3.5 font-sans text-base text-white placeholder-white/40"
                                 data-placeholder-i18n="placeholder_scope"
-                                placeholder="Organização — Software Soberano, Inteligência Computacional ou Ontologia Axiomática">
+                                placeholder="Organização — Software Soberano, Intelegenci artificial ou Ontologia Axiomática">
                         </div>
 
                         <!-- Native Bilingual Legal Consent Checkbox (LGPD in PT // GDPR & CCPA in EN) -->
@@ -815,7 +916,7 @@
                             <!-- SINGLE CRIMSON ELEMENT IN ACT III & THE SOLE CRIMSON BUTTON (#submit-btn) -->
                             <button id="submit-btn" type="submit"
                                 onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
-                                class="btn-unique-crimson min-h-[54px] w-full py-4 px-6 font-mono text-xs font-medium tracking-[0.24em] uppercase flex items-center justify-center gap-3">
+                                class="btn-unique-crimson min-h-[52px] sm:min-h-[54px] w-full py-3.5 sm:py-4 px-4 sm:px-6 font-mono text-[11px] sm:text-xs font-medium tracking-[0.14em] sm:tracking-[0.24em] uppercase flex items-center justify-center gap-2 sm:gap-3 text-center">
                                 <span id="btn-submit-text" data-i18n="btn_submit">SOLICITAR BRIEFING CONFIDENCIAL</span>
                                 <span id="btn-submit-arrow">→</span>
                             </button>
@@ -850,16 +951,16 @@
             </div>
 
             <!-- Minimal Footer with Jurisdiction-Aware Compliance Badge & Trigger -->
-            <footer class="hairline-t pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 font-mono text-xs tracking-[0.18em] text-white/75 uppercase">
-                <div class="flex flex-wrap items-center gap-4">
-                    <span>© 2026 <span class="font-brand-title text-xs text-white/95">APOASTRO</span> TECHNOLOGIES</span>
-                    <span class="px-2.5 py-1 hairline text-white/80" data-i18n="footer_compliance_badge">[ CONFORMIDADE LGPD ]</span>
+            <footer class="hairline-t pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-5 sm:gap-6 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/75 uppercase">
+                <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                    <span>© 2026 <span class="font-brand-title text-[10px] sm:text-xs text-white/95">APOASTRO</span> TECHNOLOGIES</span>
+                    <span class="px-2 sm:px-2.5 py-1 hairline text-white/80" data-i18n="footer_compliance_badge">[ CONFORMIDADE LGPD ]</span>
                 </div>
-                <div class="flex flex-wrap items-center gap-6">
-                    <a href="mailto:doughenriqueps@gmail.com" class="hover:text-white transition-colors">DOUGHENRIQUEPS@GMAIL.COM</a>
+                <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                    <a href="mailto:doughenriqueps@gmail.com" class="hover:text-white transition-colors break-all">DOUGHENRIQUEPS@GMAIL.COM</a>
                     <a href="https://wa.me/5515981124811" target="_blank" rel="noopener noreferrer" class="pt-only-inline hover:text-white transition-colors">WHATSAPP</a>
                     <a href="https://www.linkedin.com/company/apoastro-technologies" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LINKEDIN</a>
-                    <button type="button" onclick="openPrivacyModal()" class="hover:text-white transition-colors underline" data-i18n="footer_privacy">
+                    <button type="button" onclick="openPrivacyModal()" class="hover:text-white transition-colors underline text-left" data-i18n="footer_privacy">
                         POLÍTICA DE PRIVACIDADE (LGPD)
                     </button>
                 </div>
@@ -924,7 +1025,7 @@
          ********************************************************************/
         const i18n = {
             pt: {
-                doc_title: "APOASTRO — Software Soberano, Inteligência Computacional & Ontologia Axiomática",
+                doc_title: "APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática",
                 nav_briefing: "SOLICITAR BRIEFING",
                 hero_tw_status: "SCAN ÓPTICO // RASTREANDO ANOMALIAS",
                 hero_tw_motto: "// WHERE YOU SEE CHAOS — WE SEE POWER.",
@@ -945,7 +1046,7 @@
                 p1_metric: "LATÊNCIA DE NÚCLEO: < 12ms",
                 p1_spec: "ARQUITETURA PROPRIETÁRIA // ISOLAMENTO TOTAL",
                 p2_tw_sub: "02 // SÍNTESE COGNITIVA PROPRIETÁRIA",
-                p2_title: "Inteligência Computacional",
+                p2_title: "Intelegenci artificial",
                 p2_desc_html: 'Núcleos matemáticos e modelos fundacionais acoplados diretamente à realidade da sua instituição. Processamos volumes massivos de informação não estruturada para <span class="marca-texto marca-texto--mono">executar raciocínio complexo, automação de alto nível e síntese estratégica</span> sem depender de soluções superficiais de prateleira.',
                 p2_metric: "PRECISÃO OPERACIONAL: 99.94%",
                 p2_spec: "MODELOS DEDICADOS // EXECUÇÃO AUTÔNOMA",
@@ -956,13 +1057,13 @@
                 p3_spec: "GRAFO ONTOLÓGICO // SIMULAÇÃO SISTÊMICA",
                 act3_tw_header: "03 // TERMINAL DE COMANDO EXECUTIVO",
                 act3_heading: "Inicie uma operação confidencial.",
-                act3_sub_html: 'Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Inteligência Computacional ou Ontologia Axiomática na sua organização.',
+                act3_sub_html: 'Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Intelegenci artificial ou Ontologia Axiomática na sua organização.',
                 label_name: "01 // NOME E CARGO",
                 placeholder_name: "CEO - Coordenador Geral",
                 label_email: "02 // E-MAIL CORPORATIVO",
                 placeholder_email: "diretoria@organizacao.com.br",
                 label_scope: "03 // ORGANIZAÇÃO E ESCOPO PRIORITÁRIO",
-                placeholder_scope: "Organização — Software Soberano, Inteligência Computacional ou Ontologia Axiomática",
+                placeholder_scope: "Organização — Software Soberano, Intelegenci artificial ou Ontologia Axiomática",
                 privacy_consent_html: 'Autorizo o processamento dos meus dados corporativos para contato comercial, em conformidade com a <button type="button" onclick="openPrivacyModal()" class="underline text-white hover:text-white/80">Política de Privacidade (LGPD — Lei nº 13.709/2018)</button>.',
                 btn_submit: "SOLICITAR BRIEFING CONFIDENCIAL",
                 btn_sending: "TRANSMITINDO CREDENCIAIS...",
@@ -986,7 +1087,7 @@
                 }
             },
             en: {
-                doc_title: "APOASTRO — Sovereign Software, Computational Intelligence & Axiomatic Ontology",
+                doc_title: "APOASTRO — Sovereign Software, Artificial Intelligence & Axiomatic Ontology",
                 nav_briefing: "REQUEST BRIEFING",
                 hero_tw_status: "OPTICAL SCAN // LOCKING ANOMALIES",
                 hero_tw_motto: "// WHERE YOU SEE CHAOS — WE SEE POWER.",
@@ -1007,7 +1108,7 @@
                 p1_metric: "CORE LATENCY: < 12ms",
                 p1_spec: "PROPRIETARY ARCHITECTURE // FULL ISOLATION",
                 p2_tw_sub: "02 // PROPRIETARY COGNITIVE SYNTHESIS",
-                p2_title: "Computational Intelligence",
+                p2_title: "Artificial Intelligence",
                 p2_desc_html: 'Mathematical nuclei and foundational models coupled directly to your institution\'s reality. We process massive volumes of unstructured information to <span class="marca-texto marca-texto--mono">execute complex reasoning, high-level automation, and strategic synthesis</span> without relying on superficial off-the-shelf solutions.',
                 p2_metric: "OPERATIONAL PRECISION: 99.94%",
                 p2_spec: "DEDICATED MODELS // AUTONOMOUS EXECUTION",
@@ -1493,6 +1594,39 @@
 
         let activeFormationKey = 'chaos';
         let scrollProgress = 0;
+        let smoothedScrollProgress = 0;
+        let lastFrameTime = 0;
+
+        // Generate 100% Transparent PNG Favicon dynamically so every browser renders zero background
+        function applyTransparentFavicon() {
+            try {
+                const favCanvas = document.createElement('canvas');
+                favCanvas.width = 64;
+                favCanvas.height = 64;
+                const fCtx = favCanvas.getContext('2d');
+                fCtx.clearRect(0, 0, 64, 64);
+
+                // Scale from SVG viewBox (180..820, 200..760) to 64x64 transparent canvas
+                fCtx.save();
+                fCtx.scale(64 / 640, 64 / 560);
+                fCtx.translate(-180, -200);
+                fCtx.fillStyle = '#ffffff';
+
+                const p1 = new Path2D('M 214 720 L 424 242 L 437 242 L 635 720 L 555 720 L 410 356 L 252 720 Z');
+                const p2 = new Path2D('M 503 240 L 580 240 L 780 720 L 703 720 Z');
+                fCtx.fill(p1);
+                fCtx.fill(p2);
+
+                fCtx.beginPath();
+                fCtx.arc(404, 634, 84, 0, Math.PI * 2);
+                fCtx.fill();
+                fCtx.restore();
+
+                const pngUrl = favCanvas.toDataURL('image/png');
+                const pngLink = document.getElementById('favicon-png');
+                if (pngLink) pngLink.href = pngUrl;
+            } catch (_) {}
+        }
 
         // Tactical Computer Vision Scanner Targets (8 active bounding squares locking onto nodes)
         const SCANNER_COUNT = 8;
@@ -1718,7 +1852,7 @@
             scene = new THREE.Scene();
 
             camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-            camera.position.z = 21;
+            camera.position.z = window.innerWidth < 768 ? 27 : 21;
 
             renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
@@ -1752,6 +1886,7 @@
 
             window.addEventListener('resize', () => {
                 camera.aspect = window.innerWidth / window.innerHeight;
+                camera.position.z = window.innerWidth < 768 ? 27 : 21;
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
                 if (cvCanvas) {
@@ -1844,7 +1979,7 @@
             }
 
             // 2. Draw Monochrome Tactical Bounding Squares ([ ]) locking onto the dots
-            cvCtx.font = '500 9px "Martian Mono", monospace';
+            cvCtx.font = '600 10px "Military Jr34", "Military", "Chakra Petch", "Martian Mono", monospace';
             projectedNodes.forEach((node, idx) => {
                 const { sx, sy, st, alphaEnv } = node;
                 const snapScale = 1 + Math.max(0, (1 - Math.min(1, st.age / 18)) * 0.65);
@@ -1904,6 +2039,14 @@
             requestAnimationFrame(animateWebGL);
             if (!particleSystem || !isPageVisible) return;
 
+            // Normalize frame delta time (prevents speedups on 120Hz/144Hz/240Hz screens or scroll bursts)
+            const rawDt = lastFrameTime ? (time - lastFrameTime) : 16.67;
+            lastFrameTime = time;
+            const dtFactor = Math.min(Math.max(rawDt / 16.67, 0.25), 2.0);
+
+            // Heavily damp scroll progress so rapid mouse-wheel scrolling never spins the 3D scene fast
+            smoothedScrollProgress += (scrollProgress - smoothedScrollProgress) * (0.035 * dtFactor);
+
             const t = time * 0.00055;
             const posAttr = particleSystem.geometry.attributes.position;
             const currentArr = posAttr.array;
@@ -1911,6 +2054,7 @@
 
             const isChaos = activeFormationKey === 'chaos';
             const isPredictive = activeFormationKey === 'predictive';
+            const morphSpeed = 0.065 * dtFactor;
 
             for (let i = 0; i < PARTICLE_COUNT; i++) {
                 const i3 = i * 3;
@@ -1926,24 +2070,31 @@
                     ty = Math.sin(tx * 0.42 + t * 2.2) * Math.cos(tz * 0.42 + t * 1.6) * 2.7;
                 }
 
-                currentArr[i3]     += (tx - currentArr[i3]) * 0.065;
-                currentArr[i3 + 1] += (ty - currentArr[i3 + 1]) * 0.065;
-                currentArr[i3 + 2] += (tz - currentArr[i3 + 2]) * 0.065;
+                currentArr[i3]     += (tx - currentArr[i3]) * morphSpeed;
+                currentArr[i3 + 1] += (ty - currentArr[i3 + 1]) * morphSpeed;
+                currentArr[i3 + 2] += (tz - currentArr[i3 + 2]) * morphSpeed;
             }
 
             posAttr.needsUpdate = true;
 
-            // Authoritative camera/object orientation
+            // Bounded, velocity-clamped orientation (eliminates rapid spin/unwinding on mouse scroll)
+            let targetRotY, targetRotX;
             if (activeFormationKey === 'emblem') {
                 // Lock the Apoastro Emblem upright and facing the viewer with minimal breathing
-                const targetRotY = Math.sin(t * 1.1) * 0.06;
-                const targetRotX = Math.cos(t * 0.9) * 0.03;
-                particleSystem.rotation.y += (targetRotY - particleSystem.rotation.y) * 0.07;
-                particleSystem.rotation.x += (targetRotX - particleSystem.rotation.x) * 0.07;
+                targetRotY = Math.sin(t * 1.1) * 0.05;
+                targetRotX = Math.cos(t * 0.9) * 0.025;
             } else {
-                particleSystem.rotation.y += ((t * 0.28 + scrollProgress * 1.1) - particleSystem.rotation.y) * 0.05;
-                particleSystem.rotation.x += ((Math.sin(t * 0.45) * 0.14) - particleSystem.rotation.x) * 0.05;
+                // Gentle bounded sway + subtle damped parallax (no unbounded rotation accumulation)
+                targetRotY = Math.sin(t * 0.48) * 0.22 + (smoothedScrollProgress - 0.5) * 0.18;
+                targetRotX = Math.cos(t * 0.36) * 0.10 + (smoothedScrollProgress - 0.5) * 0.06;
             }
+
+            const maxRotStep = 0.0045 * dtFactor;
+            const deltaY = (targetRotY - particleSystem.rotation.y) * (0.045 * dtFactor);
+            const deltaX = (targetRotX - particleSystem.rotation.x) * (0.045 * dtFactor);
+
+            particleSystem.rotation.y += Math.max(-maxRotStep, Math.min(maxRotStep, deltaY));
+            particleSystem.rotation.x += Math.max(-maxRotStep, Math.min(maxRotStep, deltaX));
 
             renderer.render(scene, camera);
             renderComputerVisionOverlay(currentArr, time);
@@ -2128,6 +2279,7 @@
                 a.href = APOASTRO_CONFIG.linkedinUrl;
             });
 
+            applyTransparentFavicon();
             setLanguage(currentLang);
             typewriterEngine.observeAll();
             initWebGL();
