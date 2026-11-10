@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática</title>
-    <meta name="description" content="Transformamos caos operacional em sistemas sob medida. Arquitetura proprietária de comando, Intelegenci artificial e ontologia axiomática.">
+    <title>APOASTRO — Software Soberano, Inteligência Artificial & Ontologia Axiomática</title>
+    <meta name="description" content="Transformamos caos operacional em sistemas sob medida. Arquitetura proprietária de comando, Inteligência Artificial e Ontologia Axiomática.">
     <meta name="theme-color" content="#000000">
 
     <!-- Open Graph / LinkedIn / WhatsApp Preview -->
@@ -12,12 +12,12 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:site_name" content="APOASTRO">
-    <meta property="og:title" content="APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática">
+    <meta property="og:title" content="APOASTRO — Software Soberano, Inteligência Artificial & Ontologia Axiomática">
     <meta property="og:description" content="Where you see chaos — we see power. Transformamos caos operacional em sistemas sob medida e infraestrutura de comando.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática">
+    <meta name="twitter:title" content="APOASTRO — Software Soberano, Inteligência Artificial & Ontologia Axiomática">
     <meta name="twitter:description" content="Where you see chaos — we see power. Transformamos caos operacional em sistemas sob medida.">
 
     <!-- Official Apoastro Emblem Favicon (100% Transparent Background — Vector + Dynamic Canvas PNG) -->
@@ -33,7 +33,7 @@
     <!-- Fonts: Lastica (Brand) + Military Jr34 (Tactical Military) + Lexend Exa, Space Grotesk & Chakra Petch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Lexend+Exa:wght@300;400;500;600;700&family=Martian+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@200;300;400;500&family=Lexend+Exa:wght@200;300;400;500;600;700&family=Martian+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/military" rel="stylesheet">
 
     <script>
@@ -183,6 +183,71 @@
         .hairline-l { border-left: 1px solid var(--hairline); }
         .hairline-r { border-right: 1px solid var(--hairline); }
         .hairline { border: 1px solid var(--hairline); }
+
+        /* Ultra-Light Brutalist Editorial Copy Contrast (Weight 200/300) */
+        .editorial-body-copy {
+            font-family: 'Inter', sans-serif;
+            font-weight: 200;
+            letter-spacing: -0.01em;
+            line-height: 1.68;
+        }
+        .editorial-body-copy .marca-texto--mono {
+            font-weight: 400;
+        }
+
+        /* Tabular Technical Specification Index (Fast Dry 70ms Inversion Hover) */
+        .spec-index-table {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+        }
+        .spec-index-row {
+            display: grid;
+            grid-template-columns: 76px 1fr auto;
+            gap: 0.75rem;
+            align-items: center;
+            padding: 0.65rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: var(--font-military);
+            font-variant-numeric: tabular-nums;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.78);
+            background: rgba(255, 255, 255, 0.01);
+            transition: background-color 70ms linear, color 70ms linear, border-color 70ms linear, padding-left 70ms linear;
+        }
+        .spec-index-row:hover {
+            background-color: #ffffff;
+            color: #000000;
+            border-bottom-color: #ffffff;
+            padding-left: 1.1rem;
+        }
+        .spec-index-row .spec-serial {
+            color: rgba(255, 255, 255, 0.45);
+            transition: color 70ms linear;
+        }
+        .spec-index-row .spec-meta {
+            color: rgba(255, 255, 255, 0.55);
+            transition: color 70ms linear;
+            text-align: right;
+        }
+        .spec-index-row:hover .spec-serial,
+        .spec-index-row:hover .spec-meta {
+            color: #000000;
+        }
+        @media (max-width: 640px) {
+            .spec-index-row {
+                grid-template-columns: 62px 1fr;
+                font-size: 10px;
+                letter-spacing: 0.1em;
+                padding: 0.6rem 0.5rem;
+            }
+            .spec-index-row .spec-meta {
+                grid-column: 2;
+                text-align: left;
+                font-size: 9px;
+                opacity: 0.75;
+            }
+        }
 
         /* Subtle Cinematic Vignette */
         .cinematic-vignette {
@@ -666,7 +731,7 @@
                 </h1>
 
                 <!-- Broad Institutional Subheadline (Zero Saturated Buzzwords) -->
-                <p class="font-sans text-sm sm:text-lg md:text-xl text-white/80 font-light max-w-3xl leading-relaxed mt-5 sm:mt-8" data-i18n="hero_sub">
+                <p class="editorial-body-copy text-sm sm:text-lg md:text-xl text-white/85 max-w-3xl mt-5 sm:mt-8" data-i18n="hero_sub">
                     Unificamos fluxos complexos e informações dispersas da sua organização em uma arquitetura proprietária de comando, síntese computacional e decisão de alta precisão.
                 </p>
 
@@ -720,7 +785,7 @@
                     <span data-i18n="act2_title_1">Três disciplinas.</span>
                     <span class="marca-texto marca-texto--crimson" id="hl-act2" data-i18n="act2_title_2">Uma única infraestrutura de comando.</span>
                 </h2>
-                <p class="font-sans text-sm sm:text-lg md:text-xl text-white/75 font-light leading-relaxed mt-4 sm:mt-6 max-w-3xl" data-i18n="act2_sub">
+                <p class="editorial-body-copy text-sm sm:text-lg md:text-xl text-white/80 mt-4 sm:mt-6 max-w-3xl" data-i18n="act2_sub">
                     A entropia da sua operação é absorvida, estruturada e convertida em alavancagem institucional através de três camadas tecnológicas interdependentes.
                 </p>
             </div>
@@ -741,7 +806,7 @@
                         <h3 class="pillar-title font-brand-title text-lg sm:text-3xl md:text-4xl font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase" data-i18n="p1_title">
                             Software Soberano
                         </h3>
-                        <p class="font-sans text-sm sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p1_desc_html">
+                        <p class="editorial-body-copy text-sm sm:text-lg md:text-2xl text-white/85" data-i18n="p1_desc_html">
                             Ecossistemas digitais proprietários desenhados do zero para a realidade estrutural da sua operação. Substituímos ferramentas genéricas e fragmentadas por <span class="marca-texto marca-texto--mono">infraestruturas de código fechado, ultrarrápidas e inabaláveis</span>, garantindo domínio absoluto sobre o núcleo do seu negócio.
                         </p>
                         <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-4 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/85 uppercase">
@@ -751,7 +816,7 @@
                     </div>
                 </article>
 
-                <!-- PILLAR 02: INTELEGENCI ARTIFICIAL -->
+                <!-- PILLAR 02: INTELIGÊNCIA ARTIFICIAL -->
                 <article data-pillar="1" class="pillar-row reading-block pl-4 sm:pl-8 md:pl-10 py-6 sm:py-8 md:py-14 pr-3 sm:pr-6 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 items-start">
                     <div class="lg:col-span-4 font-mono">
                         <div class="reading-status-tag inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 mb-3 sm:mb-4 text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase text-white bg-white/10 border-l-2 border-white">
@@ -762,10 +827,10 @@
                     </div>
                     <div class="lg:col-span-8 max-w-3xl space-y-4 sm:space-y-6">
                         <h3 class="pillar-title font-brand-title text-lg sm:text-3xl md:text-4xl font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase" data-i18n="p2_title">
-                            Intelegenci artificial
+                            Inteligência Artificial
                         </h3>
-                        <p class="font-sans text-sm sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p2_desc_html">
-                            Núcleos matemáticos e modelos fundacionais acoplados diretamente à realidade da sua instituição. Processamos volumes massivos de informação não estruturada para <span class="marca-texto marca-texto--mono">executar raciocínio complexo, automação de alto nível e síntese estratégica</span> sem depender de soluções superficiais de prateleira.
+                        <p class="editorial-body-copy text-sm sm:text-lg md:text-2xl text-white/85" data-i18n="p2_desc_html">
+                            Núcleos matemáticos e modelos fundacionais acoplados diretamente à realidade da sua instituição. Processamos volumes massivos de informação não estruturada para <span class="marca-texto marca-texto--crimson">executar raciocínio complexo, automação de alto nível e síntese estratégica</span> sem depender de soluções superficiais de prateleira.
                         </p>
                         <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-4 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/85 uppercase">
                             <span class="border border-white/30 bg-white/[0.04] px-3 sm:px-3.5 py-2 text-center sm:text-left" data-i18n="p2_metric">PRECISÃO OPERACIONAL: 99.94%</span>
@@ -787,8 +852,8 @@
                         <h3 class="pillar-title font-brand-title text-lg sm:text-3xl md:text-4xl font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase" data-i18n="p3_title">
                             Ontologia Axiomática
                         </h3>
-                        <p class="font-sans text-sm sm:text-lg md:text-2xl text-white/80 font-light leading-relaxed" data-i18n="p3_desc_html">
-                            Mapeamos todas as variáveis, forças e dependências da sua organização em uma camada semântica viva e matematicamente verificável. Antes de qualquer movimento estratégico, <span class="marca-texto marca-texto--mono">simulamos desdobramentos sistêmicos e eliminamos pontos cegos</span> para que a liderança governe com certeza formal.
+                        <p class="editorial-body-copy text-sm sm:text-lg md:text-2xl text-white/85" data-i18n="p3_desc_html">
+                            Mapeamos todas as variáveis, forças e dependências da sua organização em uma camada semântica viva e matematicamente verificável. Antes de qualquer movimento estratégico, <span class="marca-texto marca-texto--crimson">simulamos desdobramentos sistêmicos e eliminamos pontos cegos</span> para que a liderança governe com certeza formal.
                         </p>
                         <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-4 font-mono text-[10px] sm:text-xs tracking-[0.14em] sm:tracking-[0.18em] text-white/85 uppercase">
                             <span class="border border-white/30 bg-white/[0.04] px-3 sm:px-3.5 py-2 text-center sm:text-left" data-i18n="p3_metric">COBERTURA SEMÂNTICA: 100%</span>
@@ -802,7 +867,6 @@
 
         <!-- ============================================================= -->
         <!-- ACT III: THE END — HIGH-CONVERSION EXECUTIVE TERMINAL         -->
-        <!-- STRICT RED RULE: Only 1 crimson element in Act III (#submit-btn) -->
         <!-- ============================================================= -->
         <section id="act-3" class="min-h-[100svh] flex flex-col justify-between py-16 sm:py-24 md:py-28 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto hairline-t is-selected-view">
             
@@ -827,12 +891,13 @@
                         <span class="font-brand-title text-xs text-white">APOASTRO</span>
                     </div>
 
-                    <h2 class="font-display text-2xl sm:text-5xl font-light tracking-tight uppercase leading-[1.12] sm:leading-[1.08]" data-i18n="act3_heading">
-                        Inicie uma operação confidencial.
+                    <h2 class="font-display text-2xl sm:text-5xl font-light tracking-tight uppercase leading-[1.18] sm:leading-[1.12]">
+                        <span data-i18n="act3_heading_1">Inicie uma</span>
+                        <span class="text-white" id="hl-act3" data-i18n="act3_heading_2">operação confidencial.</span>
                     </h2>
 
-                    <p class="font-sans text-sm sm:text-base md:text-lg text-white/80 font-light leading-relaxed" data-i18n="act3_sub_html">
-                        Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Intelegenci artificial ou Ontologia Axiomática na sua organização.
+                    <p class="editorial-body-copy text-sm sm:text-base md:text-lg text-white/85" data-i18n="act3_sub_html">
+                        Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Inteligência Artificial ou Ontologia Axiomática na sua organização.
                     </p>
 
                     <!-- Direct WhatsApp Conversion Card (Visible Only in PT Mode) -->
@@ -895,7 +960,7 @@
                                 onfocus="window.soundEngine && window.soundEngine.playHoverPulse()"
                                 class="input-minimal w-full py-3 sm:py-3.5 font-sans text-base text-white placeholder-white/40"
                                 data-placeholder-i18n="placeholder_scope"
-                                placeholder="Organização — Software Soberano, Intelegenci artificial ou Ontologia Axiomática">
+                                placeholder="Organização — Software Soberano, Inteligência Artificial ou Ontologia Axiomática">
                         </div>
 
                         <!-- Native Bilingual Legal Consent Checkbox (LGPD in PT // GDPR & CCPA in EN) -->
@@ -913,7 +978,7 @@
                         <div id="form-error-msg" role="alert" class="hidden p-4 hairline border-l-2 border-l-white bg-white/[0.05] font-mono text-xs text-white/90 leading-relaxed"></div>
 
                         <div class="pt-2">
-                            <!-- SINGLE CRIMSON ELEMENT IN ACT III & THE SOLE CRIMSON BUTTON (#submit-btn) -->
+                            <!-- EXCLUSIVE CRIMSON GRADIENT SUBMIT BUTTON -->
                             <button id="submit-btn" type="submit"
                                 onmouseenter="window.soundEngine && window.soundEngine.playHoverPulse()"
                                 class="btn-unique-crimson min-h-[52px] sm:min-h-[54px] w-full py-3.5 sm:py-4 px-4 sm:px-6 font-mono text-[11px] sm:text-xs font-medium tracking-[0.14em] sm:tracking-[0.24em] uppercase flex items-center justify-center gap-2 sm:gap-3 text-center">
@@ -993,7 +1058,7 @@
                     <strong>2. Isolamento e Segurança:</strong> Não comercializamos ou compartilhamos registros com terceiros. As transmissões ocorrem sob criptografia TLS com acesso restrito à diretoria da APOASTRO.
                 </p>
                 <p>
-                    <strong>3. Direitos do Titular:</strong> A qualquer momento você pode solicitar acesso, retificação ou revogação definitiva de seus dados através do canal <a href="mailto:contato@apoastro.com" class="underline text-white">contato@apoastro.com</a>.
+                    <strong>3. Direitos do Titular:</strong> A qualquer momento você pode solicitar acesso, retificação ou revogação definitiva de seus dados através do canal <a href="mailto:doughenriqueps@gmail.com" class="underline text-white">doughenriqueps@gmail.com</a>.
                 </p>
             </div>
             <div class="pt-4 hairline-t flex justify-end">
@@ -1019,13 +1084,13 @@
 
         /********************************************************************
          * 1. NATIVE BILINGUAL DICTIONARY (PT = LGPD // EN = GDPR & CCPA)
-         *    Zero saturated AI buzzwords ("agentes de IA" banned);
-         *    Pillar 02 = Inteligência Computacional / Computational Intelligence
-         *    Pillar 03 = Ontologia Axiomática / Axiomatic Ontology
+         *    - Spelling corrected: Inteligência Artificial / Artificial Intelligence
+         *    - Official email unified: doughenriqueps@gmail.com
+         *    - Strictly 1 crimson text highlight per Act (#hl-act1, #hl-act2, #hl-act3)
          ********************************************************************/
         const i18n = {
             pt: {
-                doc_title: "APOASTRO — Software Soberano, Intelegenci artificial & Ontologia Axiomática",
+                doc_title: "APOASTRO — Software Soberano, Inteligência Artificial & Ontologia Axiomática",
                 nav_briefing: "SOLICITAR BRIEFING",
                 hero_tw_status: "SCAN ÓPTICO // RASTREANDO ANOMALIAS",
                 hero_tw_motto: "// WHERE YOU SEE CHAOS — WE SEE POWER.",
@@ -1042,28 +1107,29 @@
                 reading_active_tag: "[ EM LEITURA ATIVA ]",
                 p1_tw_sub: "01 // ENGENHARIA DE MISSÃO CRÍTICA",
                 p1_title: "Software Soberano",
-                p1_desc_html: 'Ecossistemas digitais proprietários desenhados do zero para a realidade estrutural da sua operação. Substituímos ferramentas genéricas e fragmentadas por <span class="marca-texto marca-texto--mono">infraestruturas de código fechado, ultrarrápidas e inabaláveis</span>, garantindo domínio absoluto sobre o núcleo do seu negócio.',
+                p1_desc_html: 'Ecossistemas digitais proprietários desenhados do zero para a realidade estrutural da sua operação. Substituímos ferramentas genéricas e fragmentadas por <span class="marca-texto marca-texto--crimson">infraestruturas de código fechado, ultrarrápidas e inabaláveis</span>, garantindo domínio absoluto sobre o núcleo do seu negócio.',
                 p1_metric: "LATÊNCIA DE NÚCLEO: < 12ms",
                 p1_spec: "ARQUITETURA PROPRIETÁRIA // ISOLAMENTO TOTAL",
                 p2_tw_sub: "02 // SÍNTESE COGNITIVA PROPRIETÁRIA",
-                p2_title: "Intelegenci artificial",
-                p2_desc_html: 'Núcleos matemáticos e modelos fundacionais acoplados diretamente à realidade da sua instituição. Processamos volumes massivos de informação não estruturada para <span class="marca-texto marca-texto--mono">executar raciocínio complexo, automação de alto nível e síntese estratégica</span> sem depender de soluções superficiais de prateleira.',
+                p2_title: "Inteligência Artificial",
+                p2_desc_html: 'Núcleos matemáticos e modelos fundacionais acoplados diretamente à realidade da sua instituição. Processamos volumes massivos de informação não estruturada para <span class="marca-texto marca-texto--crimson">executar raciocínio complexo, automação de alto nível e síntese estratégica</span> sem depender de soluções superficiais de prateleira.',
                 p2_metric: "PRECISÃO OPERACIONAL: 99.94%",
                 p2_spec: "MODELOS DEDICADOS // EXECUÇÃO AUTÔNOMA",
                 p3_tw_sub: "03 // MODELAGEM FORMAL DE REALIDADE",
                 p3_title: "Ontologia Axiomática",
-                p3_desc_html: 'Mapeamos todas as variáveis, forças e dependências da sua organização em uma camada semântica viva e matematicamente verificável. Antes de qualquer movimento estratégico, <span class="marca-texto marca-texto--mono">simulamos desdobramentos sistêmicos e eliminamos pontos cegos</span> para que a liderança governe com certeza formal.',
+                p3_desc_html: 'Mapeamos todas as variáveis, forças e dependências da sua organização em uma camada semântica viva e matematicamente verificável. Antes de qualquer movimento estratégico, <span class="marca-texto marca-texto--crimson">simulamos desdobramentos sistêmicos e eliminamos pontos cegos</span> para que a liderança governe com certeza formal.',
                 p3_metric: "COBERTURA SEMÂNTICA: 100%",
                 p3_spec: "GRAFO ONTOLÓGICO // SIMULAÇÃO SISTÊMICA",
                 act3_tw_header: "03 // TERMINAL DE COMANDO EXECUTIVO",
-                act3_heading: "Inicie uma operação confidencial.",
-                act3_sub_html: 'Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Intelegenci artificial ou Ontologia Axiomática na sua organização.',
+                act3_heading_1: "Inicie uma",
+                act3_heading_2: "operação confidencial.",
+                act3_sub_html: 'Atuamos diretamente com <span class="marca-texto marca-texto--mono">decisores, diretores e coordenadores gerais</span>. Solicite um diagnóstico estrutural para arquitetar Software Soberano, Inteligência Artificial ou Ontologia Axiomática na sua organização.',
                 label_name: "01 // NOME E CARGO",
                 placeholder_name: "CEO - Coordenador Geral",
                 label_email: "02 // E-MAIL CORPORATIVO",
                 placeholder_email: "diretoria@organizacao.com.br",
                 label_scope: "03 // ORGANIZAÇÃO E ESCOPO PRIORITÁRIO",
-                placeholder_scope: "Organização — Software Soberano, Intelegenci artificial ou Ontologia Axiomática",
+                placeholder_scope: "Organização — Software Soberano, Inteligência Artificial ou Ontologia Axiomática",
                 privacy_consent_html: 'Autorizo o processamento dos meus dados corporativos para contato comercial, em conformidade com a <button type="button" onclick="openPrivacyModal()" class="underline text-white hover:text-white/80">Política de Privacidade (LGPD — Lei nº 13.709/2018)</button>.',
                 btn_submit: "SOLICITAR BRIEFING CONFIDENCIAL",
                 btn_sending: "TRANSMITINDO CREDENCIAIS...",
@@ -1077,7 +1143,7 @@
                     <p>Em estrita conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD)</strong>, a <strong>APOASTRO TECHNOLOGIES</strong> informa que os dados corporativos submetidos no terminal de briefing executivo (Nome, Cargo, E-mail Corporativo e Escopo Organizacional) são coletados exclusivamente para avaliação arquitetural e contato comercial direto.</p>
                     <p><strong>1. Finalidade e Base Legal:</strong> O tratamento realiza-se mediante consentimento expresso do titular e para procedimentos preliminares relacionados a contrato ou parceria comercial solicitada pelo próprio executivo.</p>
                     <p><strong>2. Isolamento e Segurança:</strong> Não comercializamos ou compartilhamos registros com terceiros. As transmissões ocorrem sob criptografia TLS com acesso restrito à diretoria da APOASTRO.</p>
-                    <p><strong>3. Direitos do Titular:</strong> A qualquer momento você pode solicitar acesso, retificação ou exclusão definitiva de seus dados através do canal <a href="mailto:contato@apoastro.com" class="underline text-white">contato@apoastro.com</a>.</p>
+                    <p><strong>3. Direitos do Titular:</strong> A qualquer momento você pode solicitar acesso, retificação ou exclusão definitiva de seus dados através do canal <a href="mailto:doughenriqueps@gmail.com" class="underline text-white">doughenriqueps@gmail.com</a>.</p>
                 `,
                 privacy_modal_close: "CIENTE // FECHAR",
                 acts: {
@@ -1104,28 +1170,29 @@
                 reading_active_tag: "[ ACTIVE READING BLOCK ]",
                 p1_tw_sub: "01 // MISSION-CRITICAL ENGINEERING",
                 p1_title: "Sovereign Software",
-                p1_desc_html: 'Proprietary digital ecosystems engineered from the ground up for the structural reality of your operation. We replace generic, fragmented tools with <span class="marca-texto marca-texto--mono">closed-code, ultra-fast, unshakeable infrastructures</span>, ensuring absolute dominion over your core business.',
+                p1_desc_html: 'Proprietary digital ecosystems engineered from the ground up for the structural reality of your operation. We replace generic, fragmented tools with <span class="marca-texto marca-texto--crimson">closed-code, ultra-fast, unshakeable infrastructures</span>, ensuring absolute dominion over your core business.',
                 p1_metric: "CORE LATENCY: < 12ms",
                 p1_spec: "PROPRIETARY ARCHITECTURE // FULL ISOLATION",
                 p2_tw_sub: "02 // PROPRIETARY COGNITIVE SYNTHESIS",
                 p2_title: "Artificial Intelligence",
-                p2_desc_html: 'Mathematical nuclei and foundational models coupled directly to your institution\'s reality. We process massive volumes of unstructured information to <span class="marca-texto marca-texto--mono">execute complex reasoning, high-level automation, and strategic synthesis</span> without relying on superficial off-the-shelf solutions.',
+                p2_desc_html: 'Mathematical nuclei and foundational models coupled directly to your institution\'s reality. We process massive volumes of unstructured information to <span class="marca-texto marca-texto--crimson">execute complex reasoning, high-level automation, and strategic synthesis</span> without relying on superficial off-the-shelf solutions.',
                 p2_metric: "OPERATIONAL PRECISION: 99.94%",
                 p2_spec: "DEDICATED MODELS // AUTONOMOUS EXECUTION",
                 p3_tw_sub: "03 // FORMAL REALITY MODELING",
                 p3_title: "Axiomatic Ontology",
-                p3_desc_html: 'We map every variable, force, and dependency of your organization into a living, mathematically verifiable semantic layer. Before any strategic move, <span class="marca-texto marca-texto--mono">we simulate systemic outcomes and eliminate blind spots</span> so leadership governs with formal certainty.',
+                p3_desc_html: 'We map every variable, force, and dependency of your organization into a living, mathematically verifiable semantic layer. Before any strategic move, <span class="marca-texto marca-texto--crimson">we simulate systemic outcomes and eliminate blind spots</span> so leadership governs with formal certainty.',
                 p3_metric: "SEMANTIC COVERAGE: 100%",
                 p3_spec: "ONTOLOGICAL GRAPH // SYSTEMIC SIMULATION",
                 act3_tw_header: "03 // EXECUTIVE COMMAND TERMINAL",
-                act3_heading: "Initiate a confidential briefing.",
-                act3_sub_html: 'We partner directly with <span class="marca-texto marca-texto--mono">chief executives, directors, and general coordinators</span>. Request a structural assessment to architect Sovereign Software, Computational Intelligence, or Axiomatic Ontology within your institution.',
+                act3_heading_1: "Initiate a",
+                act3_heading_2: "confidential briefing.",
+                act3_sub_html: 'We partner directly with <span class="marca-texto marca-texto--mono">chief executives, directors, and general coordinators</span>. Request a structural assessment to architect Sovereign Software, Artificial Intelligence, or Axiomatic Ontology within your institution.',
                 label_name: "01 // NAME & ROLE",
                 placeholder_name: "CEO - General Coordinator",
                 label_email: "02 // CORPORATE EMAIL",
                 placeholder_email: "executive@organization.com",
                 label_scope: "03 // ORGANIZATION & PRIMARY SCOPE",
-                placeholder_scope: "Organization — Sovereign Software, Computational Intelligence, or Axiomatic Ontology",
+                placeholder_scope: "Organization — Sovereign Software, Artificial Intelligence, or Axiomatic Ontology",
                 privacy_consent_html: 'I agree to the processing of my corporate data for commercial contact in accordance with our <button type="button" onclick="openPrivacyModal()" class="underline text-white hover:text-white/80">Privacy Policy (GDPR / CCPA)</button>.',
                 btn_submit: "REQUEST CONFIDENTIAL BRIEFING",
                 btn_sending: "TRANSMITTING CREDENTIALS...",
@@ -1137,9 +1204,9 @@
                 privacy_modal_title: "PRIVACY POLICY & DATA GOVERNANCE (GDPR / CCPA)",
                 privacy_modal_body_html: `
                     <p>In strict compliance with international data protection frameworks including the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>, <strong>APOASTRO TECHNOLOGIES</strong> processes corporate contact details submitted through our executive terminal solely for architectural assessment and direct commercial communication.</p>
-                    <p><strong>1. Lawful Basis & Purpose:</strong> Processing is conducted under explicit consent and legitimate corporate interest to evaluate bespoke software, computational intelligence, or ontological modeling engagements requested by the user.</p>
+                    <p><strong>1. Lawful Basis & Purpose:</strong> Processing is conducted under explicit consent and legitimate corporate interest to evaluate bespoke software, artificial intelligence, or ontological modeling engagements requested by the user.</p>
                     <p><strong>2. Data Isolation & Security:</strong> We never sell, rent, or trade corporate records. All transmissions are encrypted via TLS and restricted to APOASTRO executive leadership.</p>
-                    <p><strong>3. Your Rights:</strong> You may request access, rectification, or permanent erasure of your corporate records at any time by contacting <a href="mailto:contato@apoastro.com" class="underline text-white">contato@apoastro.com</a>.</p>
+                    <p><strong>3. Your Rights:</strong> You may request access, rectification, or permanent erasure of your corporate records at any time by contacting <a href="mailto:doughenriqueps@gmail.com" class="underline text-white">doughenriqueps@gmail.com</a>.</p>
                 `,
                 privacy_modal_close: "ACKNOWLEDGED // CLOSE",
                 acts: {
